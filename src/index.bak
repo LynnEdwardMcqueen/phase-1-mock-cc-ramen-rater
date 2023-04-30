@@ -1,0 +1,43 @@
+// write your code here
+
+document.addEventListener("DOMContentLoaded", () => {
+   
+   requestRamen();
+  debugger
+ 
+})
+
+function requestRamen() 
+{
+  debugger
+  console.log("requestRamen")
+  fetch( "http://localhost:3000/ramens")
+  .then (res => console.log(res))
+ /* .then (ramanData => console.log(ramanData))
+  .then ( (ramenData) => {
+    debugger
+    ramenData.forEach((ramen) => {
+      renderImagesAndCreateListener(ramen);
+    })
+  }) */
+    
+}
+
+
+function renderImagesAndCreateListener(ramen) {
+
+  // First - load a node for the new image
+  // div id="ramen-menu"
+
+  debugger
+  let insertionPoint = document.querySelector("div#ramen-menu");
+  let image = document.createElement("img")  
+  image.src = ramen.image;
+  insertionPoint.appendChild(image)
+
+  // 2nd - Create a listener
+  image.addEventListener("click", (event) => {
+    debugger
+  })
+        
+}
